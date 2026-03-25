@@ -1,0 +1,89 @@
+body { 
+    margin: 0; 
+    overflow: hidden; 
+    background-color: #3b207a; 
+    font-family: 'Courier New', Courier, monospace; 
+    touch-action: none; 
+    user-select: none; 
+}
+
+canvas { 
+    display: block; 
+}
+
+#ui-layer { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100vw; 
+    height: 100vh; 
+    pointer-events: none; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.hidden { 
+    display: none !important; 
+}
+
+#score-display { 
+    position: absolute; 
+    top: 15%; 
+    font-size: 5rem; 
+    font-weight: bold; 
+    color: white; 
+    text-shadow: 0 0 15px #00ff66; 
+    z-index: 10;
+}
+
+.screen { 
+    pointer-events: auto; 
+    text-align: center; 
+    cursor: pointer; 
+    width: 100%; 
+    height: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    background: rgba(0,0,0,0.2); 
+}
+
+#start-text { 
+    font-size: 3rem; 
+    color: #ccffcc; 
+    text-shadow: 0 0 20px #00ff66; 
+    letter-spacing: 5px; 
+    font-weight: bold;
+}
+
+.failure-text { 
+    color: #ff0055; 
+    font-size: 4rem; 
+    text-shadow: 0 0 20px #ff0055; 
+    font-weight: bold; 
+    margin: 0; 
+    letter-spacing: 2px;
+}
+
+.reboot-text { 
+    color: white; 
+    font-size: 2rem; 
+    letter-spacing: 4px; 
+    margin-top: 10px;
+}
+
+#reticle { 
+    position: absolute; 
+    width: 40px; 
+    height: 40px; 
+    border: 4px solid rgba(255,255,255,0.8); 
+    box-shadow: 0 0 10px #00ff66, inset 0 0 10px #00ff66; 
+    border-radius: 5px; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 5;
+}
